@@ -2,6 +2,14 @@ var txt = "Your search term(s) here, e.g. Numb,Papercut";
 var timeOut;
 var txtLen = txt.length;
 var char = 0;
+
+setTimeout(function(){
+let viewheight=window.visualViewport.height;
+let viewwidth=window.visualViewport.width;
+let viewport=document.querySelector("meta[name=viewport]");
+viewport.setAttribute("content", "height=" + viewheight + "px, width=" + viewwidth + "px, initial-scale=1.0");
+},300);
+
 $('.main-search').attr('placeholder', '|');
 (function typeIt() {
     var humanize = Math.round(Math.random() * (200 - 30)) + 30;
