@@ -16,8 +16,8 @@ def home():
                 listoftexts=stringoftexts.split(',')
                 listofids=[]
                 for i in listoftexts:
-                    search_string_to_use=Search(i, limit = 1).result()['result'][0]["id"]
-                    listofids.append(search_string_to_use)
+                    search_string=Search(i, limit = 1).result()['result'][0]["id"]
+                    listofids.append(search_string)
 
                 listOfVideos = "http://www.youtube.com/watch_videos?video_ids=" + ','.join(listofids)
 
